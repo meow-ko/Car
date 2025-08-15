@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Racer</title>
+    <link rel="stylesheet" href="game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info-panel">
+            <div>SCORE: <span id="score">0</span></div>
+            <div>LEVEL: <span id="level">1</span></div>
+            <div>LIVES: <span id="lives">3</span></div>
+        </div>
+        
+        <div class="game-area">
+            <div class="side-border left-border"></div>
+            <div class="side-border right-border"></div>
+            <div id="road" class="road"></div>
+            <div id="roadLines"></div>
+            <div id="playerCar"></div>
+            <div id="obstacles"></div>
+        </div>
+        
+        <div class="game-over" id="gameOver">
+            <h2>GAME OVER!</h2>
+            <p>YOUR SCORE: <span id="finalScore">0</span></p>
+            <p>HIGH SCORE: <span id="highScore">0</span></p>
+            <button id="restartGame">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <audio id="crashSound" src="https://assets.mixkit.co/sfx/preview/mixkit-car-collision-1581.mp3" preload="auto"></audio>
+    <audio id="engineSound" src="https://assets.mixkit.co/sfx/preview/mixkit-car-engine-revving-1560.mp3" preload="auto" loop></audio>
+    <audio id="scoreSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
